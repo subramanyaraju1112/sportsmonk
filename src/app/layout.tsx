@@ -1,5 +1,6 @@
 import React from "react";
 import "./globals.css";
+import ReduxProvider from "@/store/provider";
 
 export const metadata = {
   title: "My Next App",
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <ReduxProvider>
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   );
